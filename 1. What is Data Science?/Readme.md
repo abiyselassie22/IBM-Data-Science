@@ -21,5 +21,7 @@ Data Science is an attempt to work with data to find answers to questions that w
 
 What is Data Science? [Click for verification](https://coursera.org/verify/TYWJCQ97H7BG)<br>
 Data Science Orientation. [Click here](https://www.credly.com/badges/6fe8d949-ca05-43df-b842-1a38cbc15b19/public_url) <br>
-Data Science Orientation. [Click for verification](https://www.credly.com/go/7JBxQ29g)<br>
+![](/image/data-science-orientation%20(1).png)
+
+
 
