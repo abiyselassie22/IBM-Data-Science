@@ -23,5 +23,8 @@ What is Data Science? [Click for verification](https://coursera.org/verify/TYWJC
 Data Science Orientation. [Click here](https://www.credly.com/badges/6fe8d949-ca05-43df-b842-1a38cbc15b19/public_url) <br>
 ![](/image/data-science-orientation%20(1).png)
 
+![image](https://github.com/user-attachments/assets/72e6af40-d8a0-4e01-9c5f-e808a6294c9d)
+
+![image](https://github.com/user-attachments/assets/5b3cf3ff-8bb2-4ec6-806b-cd03d4e74523)
 
 
