@@ -28,7 +28,7 @@ This course teaches the popular tools in Data Science and how to use them. It in
 ## Certificates & Badges
 
 Tools for Data Science [Click for verification] (https://coursera.org/verify/JE2THXSXVNGA)<br>
-Tools for Data Science Badge [Click for verification](https://www.credly.com/badges/0d4c4c11-47ae-46b7-8fe4-40d1b22f90f5/public_url)
+Tools for Data Science Badge [Click for verification](https://www.credly.com/badges/0d4c4c11-47ae-46b7-8fe4-40d1b22f90f5/public_url)<br>
 
 ![image](https://github.com/user-attachments/assets/a262735b-52f8-4c97-bdc1-da94d1b661da)
 ![image](https://github.com/user-attachments/assets/23fc8ab1-8140-4015-ba42-18f4292b9aaa)
