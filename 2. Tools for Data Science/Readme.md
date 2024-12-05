@@ -2,7 +2,7 @@
 
 ## Summary
 
-This course teaches the popular tools in Data Science and how to use them. It involves Data Science libraries & packages, datasets, machine learning models, kernels, various open source, commercial, Big data & cloud-based tools.  It outlines key topics such as "What Do Data Scientists Do?", "Foundations of Big data", "Deep Learning & Machine Learning", "Data Science in Business", "Careers and Recruiting in Data Science", "The Report Structure".
+This course teaches the popular tools in Data Science and how to use them. It involves Data Science libraries & packages, datasets, machine learning models, kernels, various open source, commercial, Big data & cloud-based tools.  
 
 ## Weekly Modules
 
