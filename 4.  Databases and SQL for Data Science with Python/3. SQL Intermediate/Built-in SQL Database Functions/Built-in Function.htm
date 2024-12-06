@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="renderer" content="webkit" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta name="keywords" content="Editor.md,editor,Markdown Editor,Markdown" />
+    <meta name="description" content="Skills Network Author IDE" />
+    <title>Skills Network Editor</title>
+    <link rel="stylesheet" href="/editormd/examples/css/style.css?version=3.4.7" />
+    <link rel="stylesheet" href="/editormd/css/editormd.css?version=3.4.7" />
+    <link rel="stylesheet" href="/public/css/custom.css?version=3.4.7" />
+    <link rel="stylesheet" href="/public/css/custom_popover.css?version=3.4.7" />
+    <link rel="shortcut icon" href="/public/images/SN_favicon.png" type="image/x-icon" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <script src="/public/js/comms.js?version=3.4.7"></script>
+    <script src="//unpkg.com/alpinejs"></script>
+</head>
+
+<body>
+    <div id="layout">
+    <div id="test-editormd">
+        <textarea style="display:none;">&lt;center&gt;
+	&lt;img src&#x3D;&quot;https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DB0201EN-SkillsNetwork/labs/Labs_Coursera_V5/labs/Lab%20-%20Built-in%20functions%20/images/SN_web_lightmode.png&quot; width&#x3D;&quot;300&quot;&gt;
+&lt;/center&gt;
+&lt;br/&gt;
+
+## Hands-on Lab: Built-in functions - Aggregate, Scalar, String, Date and Time Functions
+
+Now let us practice using sub-queries and working with multiple tables. Use the PETRESCUE-CREATE.sql file provided to create the table and execute the queries in the last two videos.
+
+| ID | ANIMAL | QUANTITY | COST | RESCUEDATE |
+| ----------- | ----------- | ----------- | ----------- | ----------- |
+| 1 | Cat | 9 | 450.09 | 5/29/2018 |
+| 2 | Dog | 3 | 666.66 | 6/1/2018 |
+| 3 | Dog | 1 | 100 | 6/4/2018 |
+| 4 | Parrot | 2 | 50 | 6/4/2018 |
+| 5 | Dog | 1 | 75.75 | 6/10/2018 |
+| 6 | Hamster | 6 | 60.6 | 6/11/2018 |
+| 7 | Cat | 1 | 44.44 | 6/11/2018 |
+| 8 | Goldfish | 24 | 48.48 | 6/14/2018 |
+| 9 | Dog | 2 | 222.22 | 6/15/2018 |
+
+#### Objectives
+
+After completing this lab, you will be able to:
+
+1. Compose and run sub-queries with multiple tables
+2. Check query results and view log files
+
+Compose and run the following queries. Check that the results are what you expect and remember to view the logs in the Results section for errors and warnings.
+
+**Note:** The solutions are provided at the end of this lab, but please try to compose the queries on your own before checking the solutions.
+
+ ### **NOTE** : Make sure that you are using the CSV file and datasets from the same instruction file.
+ 
+### Exercise 1: Create the Pet Rescue table
+
+Rather than create the table manually by typing the DDL commands in the SQL editor, you will execute a script containing the create table command. 
+
+1. Download the script file [PETRESCUE-CREATE.sql](https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DB0201EN-SkillsNetwork/labs/Labs_Coursera_V5/datasets/PETSALE_PETRESCUE/PETRESCUE-CREATE.sql) &lt;br&gt;
+**Note**: To download, just right-click on the link above and click on **Save As..** or **Save Link As...** depending on your browser. Save the file as a .sql file and not HTML.
+
+2. Login to IBM Cloud and go to the Resources Dashboard: [https://cloud.ibm.com/resources](https://cloud.ibm.com/resources?utm_source&#x3D;skills_network&amp;utm_content&#x3D;in_lab_content_link&amp;utm_id&#x3D;Lab-IBMDeveloperSkillsNetwork-DB0201EN-SkillsNetwork) where you can find the Db2 service that you created in a previous Lab. Click on the **Db2-xx** service. Next, open the Db2 Console by clicking on **Open Console** button. Go to the **Run SQL** page. The Run SQL tool enables you to run DDL and SQL statements.
+
+3. Click on the **+** (Add New Script) icon.
+
+4. Click on **From File**.
+
+5. Locate the file **PETRESCUE-CREATE.sql** that you downloaded to your computer earlier and open it.
+
+6. Once the statements are in the SQL Editor tool, you can run the queries against the database by selecting the **Run all** button.
+
+7. On the right side of the SQL editor window you will see a **Result** section. Clicking on a query in the Result section will show the execution details of the job - whether it ran successfully or had any errors or warnings. Ensure your queries ran successfully and created all the tables.
+
+8. Now you can look at the tables you created. Navigate to the three-bar menu icon, select **Explore**, then click on **Tables**.
+
+9. Select the Schema corresponding to your Db2 userid. Then on the right side of the screen you should see the newly created **PETRESCUE** table listed (plus any other tables you may have created in previous labs e.g. INSTRUCTOR, TEST, etc.).
+
+10. Click on any of the tables and you will see its SCHEMA definition (that is list of columns, their data types, and so on). You can also click **View Data** to view the content of the table.
+
+#### Exercise 2: Aggregate Functions
+
+**Query A1:** Enter a function that calculates the total cost of all animal rescues in the PETRESCUE table.
+
+**Query A2:** Enter a function that displays the total cost of all animal rescues in the PETRESCUE table in a column called SUM_OF_COST.
+
+**Query A3:** Enter a function that displays the maximum quantity of animals rescued.
+
+**Query A4:** Enter a function that displays the average cost of animals rescued.
+
+**Query A5:** Enter a function that displays the average cost of rescuing a dog.
+
+#### Exercise 3: Scalar and String Functions
+
+**Query B1:** Enter a function that displays the rounded cost of each rescue.
+
+**Query B2:** Enter a function that displays the length of each animal name.  
+
+**Query B3:** Enter a function that displays the animal name in each rescue in uppercase.
+
+**Query B4:** Enter a function that displays the animal name in each rescue in uppercase without duplications.
+
+**Query B5:** Enter a query that displays all the columns from the PETRESCUE table, where the animal(s) rescued are cats. Use **cat** in lower case in the query.
+
+### Exercise 4: Date and Time Functions
+
+**Query C1:** Enter a function that displays the day of the month when cats have been rescued.
+
+**Query C2:** Enter a function that displays the number of rescues on the 5&lt;sup&gt;th&lt;/sup&gt; month.
+
+**Query C3:** Enter a function that displays the number of rescues on the 14&lt;sup&gt;th&lt;/sup&gt; day of the month.
+
+**Query C4:** Animals rescued should see the vet within three days of arrivals. Enter a function that displays the third day from each rescue.
+
+**Query C5:** Enter a function that displays the length of time the animals have been rescued; the difference between todays date and the rescue date.
+
+### Lab Solutions
+
+ #### Exercise 2 Solutions: Aggregate Functions
+
+**Query A1:** Enter a function that calculates the total cost of all animal rescues in the PETRESCUE table.
+
+&#x60;select SUM(COST) from PETRESCUE;&#x60;
+
+**Query A2:** Enter a function that displays the total cost of all animal rescues in the PETRESCUE table in a column called SUM_OF_COST.
+
+&#x60;select SUM(COST) AS SUM_OF_COST from PETRESCUE;&#x60;
+
+**Query A3:** Enter a function that displays the maximum quantity of animals rescued.
+
+&#x60;select MAX(QUANTITY) from PETRESCUE;&#x60;
+
+**Query A4:** Enter a function that displays the average cost of animals rescued.
+
+&#x60;select AVG(COST) from PETRESCUE;&#x60;
+
+**Query A5:** Enter a function that displays the average cost of rescuing a dog.
+
+_Hint - Bear the cost of rescuing one dog on one day, which is different from another day. So you will have to use an average of averages._
+
+&#x60;select AVG(COST/QUANTITY) from PETRESCUE where ANIMAL &#x3D; &#x27;Dog&#x27;;&#x60;
+
+#### Exercise 3 Solutions: Scalar and String Functions
+
+**Query B1:** &lt;a id&#x3D;&quot;_Hlk38373248&quot;&gt;&lt;/a&gt;Enter a function that displays the rounded cost of each rescue.
+
+&#x60;select ROUND(COST) from PETRESCUE;&#x60;
+
+**Query B2:** &lt;a id&#x3D;&quot;_Hlk38373308&quot;&gt;&lt;/a&gt;Enter a function that displays the length of each animal name.  
+
+&#x60;select LENGTH(ANIMAL) from PETRESCUE;&#x60;
+
+**Query B3:** &lt;a id&#x3D;&quot;_Hlk38373425&quot;&gt;&lt;/a&gt;Enter a function that displays the animal name in each rescue in uppercase.
+
+&#x60;select UCASE(ANIMAL) from PETRESCUE;&#x60;
+
+**Query B4:** Enter a function that displays the animal name in each rescue in uppercase without duplications.
+
+&#x60;select DISTINCT(UCASE(ANIMAL)) from PETRESCUE;
+
+**Query B5:** Enter a query that displays all the columns from the PETRESCUE table, where the animal(s) rescued are cats. Use **cat** in lower case in the query.
+
+&#x60;select * from PETRESCUE where LCASE(ANIMAL) &#x3D; &#x27;cat&#x27;;&#x60;
+
+#### Exercise 4 Solutions: Date and Time Functions
+
+**Query C1:** Enter a function that displays the day of the month when cats have been rescued.
+
+&#x60;select DAY(RESCUEDATE) from PETRESCUE where ANIMAL &#x3D; &#x27;Cat&#x27;;&#x60;
+
+**Query C2:** Enter a function that displays the number of rescues on the 5&lt;sup&gt;th&lt;/sup&gt; month.
+
+&#x60;select SUM(QUANTITY) from PETRESCUE where MONTH(RESCUEDATE)&#x3D;&#x27;05&#x27;;&#x60;
+
+**Query C3:** Enter a function that displays the number of rescues on the 14&lt;sup&gt;th&lt;/sup&gt; day of the month.
+
+&#x60;select SUM(QUANTITY) from PETRESCUE where DAY(RESCUEDATE)&#x3D;&#x27;14&#x27;;&#x60;
+
+**Query C4:** Animals rescued should see the vet within three days of arrivals. Enter a function that displays the third day from each rescue.
+
+&#x60;select (RESCUEDATE + 3 DAYS) from PETRESCUE;&#x60;
+
+**Query C5:** Enter a function that displays the length of time the animals have been rescued; the difference between todays date and the rescue date.
+
+&#x60;select (CURRENT DATE - RESCUEDATE) from PETRESCUE;&#x60;
+
+#### Summary
+
+You can now compose and run queries, check results and view the logs. You will use these skills in later labs.
+
+#### Author(s)
+
+#### Rav Ahuja
+
+![](https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DV0151EN-SkillsNetwork/images/footer_logo_sn_ibm.png)
+
+&lt;!-- #### Changelog
+
+| Date | Version | Changed by | Change Description |
+|------|--------|--------|---------|
+| 2021-07-15 | 1.4 | Malika       | Added hint to A5 solution |
+| 2020-06-29 | 1.3 | Rose Malcolm | Added new Ex.1 to create table form sql file. Renumbered remaining exercises and solutions.|
+| 2020-06-26 | 1.2 | Steve Hord | Replace quotes |
+| 2020-06-25 | 1.1 | Steve Hord | Revise Objectives section |
+| 05-Jun-20 | 1.0 | Rose Malcolm | Initial version created | 
+
+## &lt;h3 align&#x3D;&quot;center&quot;&gt; &amp;copy; IBM Corporation 2023. All rights reserved. &lt;h3/&gt;--&gt;
+</textarea>
+    </div>
+</div>
+
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+<script src="https://unpkg.com/tippy.js@6"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/he@1.2.0/he.min.js"></script>
+<script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.3.6/iframeResizer.contentWindow.min.js"></script>
+
+<script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
+<link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+<link rel="stylesheet" href="public/css/custom_plyr.css?version=3.4.7" />
+
+<script src="editormd/examples/js/jquery.min.js"></script>
+<script src="editormd/editormd.js?version=3.4.7"></script>
+
+<script src="editormd/languages/en.js"></script>
+
+<script src="public/js/common.js?version=3.4.7"></script>
+<script src="public/js/render.js?version=3.4.7"></script>
+
+<script type="text/javascript">
+
+    var authorEditor = $(function () {
+        let metadata = he.decode('{&quot;tool-type&quot;:&quot;instructional-lab&quot;,&quot;markdown-version&quot;:&quot;v1&quot;,&quot;branch&quot;:&quot;lab-4233-instruction&quot;,&quot;version-history-start-date&quot;:&quot;2023-01-19T10:44:01Z&quot;,&quot;audio-timestamp-of-request-to-generate-wav&quot;:&quot;2024-10-25T23:08:59Z&quot;,&quot;audio-file-url&quot;:&quot;https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DB0201EN-SkillsNetwork/labs/Labs_Coursera_V5/labs/Lab%20-%20Built-in%20functions%20/Hands-on_Lab__Built-in_Functions.md.wav&quot;,&quot;locales-url&quot;:&quot;https://cf-courses-data.static.labs.skills.network/ahUszrLfcCTs5KJx5CEwrQ/Hands-o-v1-locales.json&quot;}')
+        injectMetadata(metadata)
+
+        let token = findGetParameter("token");
+
+        let LABS_BASE_URL = 'https://labs.cognitiveclass.ai';
+        let asset_library_prefix_url = 'https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DB0201EN-SkillsNetwork';
+        let tool_type = "instructional-lab";
+        let filename = `labs/Labs_Coursera_V5/labs/Lab%20-%20Built-in%20functions%20/Hands-on_Lab__Built-in_Functions.md`;
+        let audioFileUrl = `https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DB0201EN-SkillsNetwork/labs/Labs_Coursera_V5/labs/Lab%20-%20Built-in%20functions%20/Hands-on_Lab__Built-in_Functions.md.wav`
+        let localesUrl = `https://cf-courses-data.static.labs.skills.network/ahUszrLfcCTs5KJx5CEwrQ/Hands-o-v1-locales.json`;
+        let currentTheme = localStorage.getItem("theme") || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? "dark" : "default");
+
+        return authorEditor = editormd("test-editormd", "3.4.7", {
+            tool_type,
+            filename,
+            audioFileUrl,
+            localesUrl,
+            width: "100%",
+            //height: "100%",
+            autoHeight: true,
+            // mode: 'markdown',
+            theme: currentTheme,
+            previewTheme: currentTheme,
+            editorTheme: currentTheme === "dark" ? "pastel-on-dark" : "default",
+            readOnly: true,
+            pluginPath: 'plugins/',
+            syncScrolling: false,
+            htmlDecode: 'img',
+            path: 'editormd/lib/',
+            watch: false,
+            // markdown,
+            toolbar: false,
+            atLink: false,
+            toc: true,
+            tocm: true,
+            tocDropdown: false,
+            tocTitle: "Table of Contents For your lab!",
+            tex: true,
+            flowChart: true,
+            sequenceDiagram: true,
+            codeFold: true, // Doesn't do anything?
+            taskList: true,
+            emoji: true,
+            saveMarkdownToTextarea: true,
+
+            onresize: function () {
+                $("html,body").css("overflow", "hidden");
+
+                this.preview.css({
+                    width: $(window).width(),
+                    height: $(window).height()
+                })
+
+                adjustProgressBarWidth()
+            },
+            fixCodeBlocks: function () {
+                adjustCodeBlocks(this);
+            },
+            onchange: function () { // called after marked finsihed its rendering
+                fixEncoding(this);
+
+                if (this.settings.tool_type != "instructional-lab") {
+                    fixCustomPlugins(this, 'https://reward.skills.network/claim');
+                }
+            },
+            onload: function () {
+                $(".markdown-body").addClass("hidden")
+                $("[type=\"file\"]").bind("change", function () {
+                    alert($(this).val());
+                    authorEditor.cm.replaceSelection($(this).val());
+                    console.log($(this).val(), authorEditor);
+                });
+
+                this.fullscreen();
+                this.previewing();
+
+                setPreviewWatchToolbar(this);
+
+                if (tool_type != "instructional-lab") {
+                    fixCustomPlugins(this, 'https://reward.skills.network/claim');
+                }
+                else {
+                    if(audioFileUrl) {
+                        addAudioWidget(this, audioFileUrl);
+                    }
+                }
+
+                const preferredLanguage = LANGUAGES.get(localStorage.getItem("preferredLanguage")) ? localStorage.getItem("preferredLanguage").toUpperCase() : "EN";
+
+                setTranslationContent(preferredLanguage).finally(() => {
+                    this.setMarkdown(this.getMarkdown());
+                    this.previewing();
+                    $(".markdown-body").removeClass("hidden")
+                });
+
+                
+                setAssetLibraryPrefixUrl(asset_library_prefix_url);
+                //comms with UI
+                setParentUrl(LABS_BASE_URL);
+                establishCommsWithUI(this);
+                //let the UI know that the author-ide has loaded
+                requestToUI({ type: "frame_loaded" });
+            }
+        });
+    });
+</script>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous">
+    </script>
+
+</html>
