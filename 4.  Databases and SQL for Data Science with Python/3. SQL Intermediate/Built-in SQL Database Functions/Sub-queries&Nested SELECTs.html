@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="renderer" content="webkit" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta name="keywords" content="Editor.md,editor,Markdown Editor,Markdown" />
+    <meta name="description" content="Skills Network Author IDE" />
+    <title>Skills Network Editor</title>
+    <link rel="stylesheet" href="/editormd/examples/css/style.css?version=3.4.7" />
+    <link rel="stylesheet" href="/editormd/css/editormd.css?version=3.4.7" />
+    <link rel="stylesheet" href="/public/css/custom.css?version=3.4.7" />
+    <link rel="stylesheet" href="/public/css/custom_popover.css?version=3.4.7" />
+    <link rel="shortcut icon" href="/public/images/SN_favicon.png" type="image/x-icon" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <script src="/public/js/comms.js?version=3.4.7"></script>
+    <script src="//unpkg.com/alpinejs"></script>
+</head>
+
+<body>
+    <div id="layout">
+    <div id="test-editormd">
+        <textarea style="display:none;">&lt;img src&#x3D;&quot;https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DB0201EN-SkillsNetwork/labs/Labs_Coursera_V5/labs/Lab%20-%20Sub-queries%20and%20Nested%20SELECTs%20/images/SN_web_lightmode.png&quot; width&#x3D;&quot;300&quot;&gt; &lt;br&gt;
+
+
+### Hands-on Lab : Sub-queries and Nested SELECTs
+**Estimated time needed:** 20 minutes
+
+In this lab, you will run through some SQL practice problems that will provide hands-on experience with nested SQL SELECT statements (also known as Sub-queries).
+
+&lt;br&gt;
+
+**How does a typical Nested SELECT statement syntax look?**
+
+&#x60;&#x60;&#x60;
+SELECT column_name [, column_name ]
+FROM table1 [, table2 ]
+WHERE column_name OPERATOR
+   (SELECT column_name [, column_name ]
+   FROM table1 [, table2 ]
+   WHERE condition);
+&#x60;&#x60;&#x60;
+&lt;br&gt;
+
+## Software Used in this Lab
+In this lab, you will use an &lt;a href&#x3D;&quot;https://www.ibm.com/products/db2-database?utm_source&#x3D;skills_network&amp;utm_content&#x3D;in_lab_content_link&amp;utm_id&#x3D;Lab-IBMDeveloperSkillsNetwork-DB0201EN-SkillsNetwork&quot;&gt;IBM Db2 Database&lt;/a&gt;. Db2 is a Relational Database Management System (RDBMS) from IBM, designed to store, analyze and retrieve data efficiently.
+
+To complete this lab you will utilize a Db2 database service on IBM Cloud. If you did not already complete this lab task earlier in this module, you will not yet have access to Db2 on IBM Cloud, and you will need to follow the lab below first: 
+
+- [Hands-on Lab : Sign up for IBM Cloud, Create Db2 service instance and Get started with the Db2 console](https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DB0201EN-SkillsNetwork/labs/Labs_Coursera_V5/labs/Lab%20-%20Sign%20up%20for%20IBM%20Cloud%20-%20Create%20Db2%20service%20instance%20-%20Get%20started%20with%20the%20Db2%20console/instructional-labs.md.html)
+
+## Database Used in this Lab
+The database used in this lab is an internal database. You will be working on a sample HR database. This HR database schema consists of 5 tables called **EMPLOYEES**, **JOB_HISTORY**, **JOBS**, **DEPARTMENTS** and **LOCATIONS**. Each table has a few rows of sample data. The following diagram shows the tables for the HR database:
+
+&lt;img src&#x3D;&quot;https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DB0201EN-SkillsNetwork/labs/Labs_Coursera_V5/labs/Lab%20-%20Sub-queries%20and%20Nested%20SELECTs%20/images/HR_Database.PNG&quot; width&#x3D;&quot;670&quot; height&#x3D;&quot;400&quot;&gt;
+
+**NOTE:** This lab requires you to have all 5 of these tables of the HR database populated with sample data on Db2. If you didn&#x27;t complete the earlier lab in this module, you won&#x27;t have the tables above populated with sample data on Db2, so you will need to go through the lab below first:
+
+- [Hands-on Lab : Create tables using SQL scripts and Load data into tables](https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DB0201EN-SkillsNetwork/labs/Labs_Coursera_V5/labs/Lab%20-%20Create%20tables%20using%20SQL%20scripts%20and%20Load%20data%20into%20tables/instructional-labs.md.html)
+
+## Objectives
+After completing this lab you will be able to:
+- Write SQL queries that demonstrate the necessity of using sub-queries
+- Compose sub-queries in the where clause
+- Build Column Expressions (i.e. sub-query in place of a column)
+- Write Table Expressions (i.e. sub-query in place of a table)
+
+ ### **NOTE** : Make sure that you are using the CSV file and datasets from the same instruction file.
+
+## Instructions
+When you approach the exercises in this lab, follow the instructions to run the queries on Db2:
+
+- Go to the [Resource List](https://cloud.ibm.com/resources?utm_source&#x3D;skills_network&amp;utm_content&#x3D;in_lab_content_link&amp;utm_id&#x3D;Lab-IBMDeveloperSkillsNetwork-DB0201EN-SkillsNetwork) of IBM Cloud by logging in where you can find the Db2 service instance that you created in a previous lab under **Services** section. Click on the **Db2-xx service**. Next, open the Db2 Console by clicking on **Open Console** button. Click on the 3-bar menu icon in the top left corner and go to the **Run SQL** page. The Run SQL tool enables you to run SQL statements.
+
+    - If needed, follow [Hands-on Lab : Sign up for IBM Cloud, Create Db2 service instance and Get started with the Db2 console](https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DB0201EN-SkillsNetwork/labs/Labs_Coursera_V5/labs/Lab%20-%20Sign%20up%20for%20IBM%20Cloud%20-%20Create%20Db2%20service%20instance%20-%20Get%20started%20with%20the%20Db2%20console/instructional-labs.md.html)
+
+### Exercise:
+
+1. Problem: 
+    
+    &gt; _Execute a failing query (i.e. one which gives an error) to retrieve all employees records whose salary is lower than the average salary._
+    
+    &lt;details&gt;
+    &lt;summary&gt;Hint&lt;/summary&gt;
+    
+    &gt; Use the AVG aggregate function.
+
+    &lt;/details&gt;
+
+    &lt;details&gt;
+    &lt;summary&gt;Solution&lt;/summary&gt;
+    
+    &#x60;&#x60;&#x60;
+    select * 
+    from employees 
+    where salary &lt; AVG(salary);
+    &#x60;&#x60;&#x60;
+
+    &lt;/details&gt;
+    
+    &lt;details&gt;
+    &lt;summary&gt;Output&lt;/summary&gt;
+    
+    ![image](https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DB0201EN-SkillsNetwork/labs/Labs_Coursera_V5/labs/Lab%20-%20Sub-queries%20and%20Nested%20SELECTs%20/images/1.png)
+
+    &lt;/details&gt;
+
+&lt;br&gt;
+
+2. Problem: 
+    
+    &gt; _Execute a working query using a sub-select to retrieve all employees records whose salary is lower than the average salary._
+    
+    &lt;details&gt;
+    &lt;summary&gt;Hint&lt;/summary&gt;
+    
+    &gt; Put AVG(SALARY) of the inner SELECT in comparison with SALARY of the outer SELECT.
+
+    &lt;/details&gt;
+
+    &lt;details&gt;
+    &lt;summary&gt;Solution&lt;/summary&gt;
+    
+    &#x60;&#x60;&#x60;
+    select EMP_ID, F_NAME, L_NAME, SALARY 
+    from employees 
+    where SALARY &lt; (select AVG(SALARY) 
+                    from employees);
+    &#x60;&#x60;&#x60;
+
+    &lt;/details&gt;
+    
+    &lt;details&gt;
+    &lt;summary&gt;Output&lt;/summary&gt;
+    
+    ![image](https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DB0201EN-SkillsNetwork/labs/Labs_Coursera_V5/labs/Lab%20-%20Sub-queries%20and%20Nested%20SELECTs%20/images/2.png)
+
+    &lt;/details&gt;
+
+&lt;br&gt;
+
+3. Problem: 
+    
+    &gt; _Execute a failing query (i.e. one which gives an error) to retrieve all employees records with EMP_ID, SALARY and maximum salary as MAX_SALARY in every row._
+    
+    &lt;details&gt;
+    &lt;summary&gt;Hint&lt;/summary&gt;
+    
+    &gt; Use the MAX aggregate function.
+
+    &lt;/details&gt;
+
+    &lt;details&gt;
+    &lt;summary&gt;Solution&lt;/summary&gt;
+    
+    &#x60;&#x60;&#x60;
+    select EMP_ID, SALARY, MAX(SALARY) AS MAX_SALARY 
+    from employees;	
+    &#x60;&#x60;&#x60;
+
+    &lt;/details&gt;
+    
+    &lt;details&gt;
+    &lt;summary&gt;Output&lt;/summary&gt;
+    
+    ![image](https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DB0201EN-SkillsNetwork/labs/Labs_Coursera_V5/labs/Lab%20-%20Sub-queries%20and%20Nested%20SELECTs%20/images/3.png)
+
+    &lt;/details&gt;
+
+&lt;br&gt;
+
+4. Problem: 
+    
+    &gt; _Execute a Column Expression that retrieves all employees records with EMP_ID, SALARY and maximum salary as MAX_SALARY in every row._
+    
+    &lt;details&gt;
+    &lt;summary&gt;Hint&lt;/summary&gt;
+    
+    &gt; Use the SELECT (which retrieves MAX(SALARY)) as a column of the other SELECT.
+
+    &lt;/details&gt;
+
+    &lt;details&gt;
+    &lt;summary&gt;Solution&lt;/summary&gt;
+    
+    &#x60;&#x60;&#x60;
+    select EMP_ID, SALARY, ( select MAX(SALARY) from employees ) AS MAX_SALARY 
+    from employees;
+    &#x60;&#x60;&#x60;
+
+    &lt;/details&gt;
+    
+    &lt;details&gt;
+    &lt;summary&gt;Output&lt;/summary&gt;
+    
+    ![image](https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DB0201EN-SkillsNetwork/labs/Labs_Coursera_V5/labs/Lab%20-%20Sub-queries%20and%20Nested%20SELECTs%20/images/4.png)
+
+    &lt;/details&gt;
+
+&lt;br&gt;
+
+5. Problem: 
+    
+    &gt; _Execute a Table Expression for the EMPLOYEES table that excludes columns with sensitive employee data (i.e. does not include columns: SSN, B_DATE, SEX, ADDRESS, SALARY)._
+    
+    &lt;details&gt;
+    &lt;summary&gt;Hint&lt;/summary&gt;
+    
+    &gt; Use a SELECT (which retrieves non-sensitive employee data) after FROM of the other SELECT.
+
+    &lt;/details&gt;
+
+    &lt;details&gt;
+    &lt;summary&gt;Solution&lt;/summary&gt;
+    
+    &#x60;&#x60;&#x60;
+    select * from ( select EMP_ID, F_NAME, L_NAME, DEP_ID from employees) AS EMP4ALL;
+    &#x60;&#x60;&#x60;
+
+    &lt;/details&gt;
+    
+    &lt;details&gt;
+    &lt;summary&gt;Output&lt;/summary&gt;
+    
+    ![image](https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DB0201EN-SkillsNetwork/labs/Labs_Coursera_V5/labs/Lab%20-%20Sub-queries%20and%20Nested%20SELECTs%20/images/5.png)
+
+    &lt;/details&gt;
+
+&lt;br&gt;
+
+### Solution Script
+
+If you would like to run all the solution queries of the SQL problems in this lab with a script, download the script below. Upload the script to the Db2 console and run it. Follow [Hands-on Lab : Create tables using SQL scripts and Load data into tables](https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DB0201EN-SkillsNetwork/labs/Labs_Coursera_V5/labs/Lab%20-%20Create%20tables%20using%20SQL%20scripts%20and%20Load%20data%20into%20tables/instructional-labs.md.html) on how to upload a script to Db2 console and run it.
+
+- [SubQueries_Solution_Script.sql](https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DB0201EN-SkillsNetwork/labs/Labs_Coursera_V5/labs/Lab%20-%20Sub-queries%20and%20Nested%20SELECTs%20/SubQueries_Solution_Script.sql)
+
+&lt;br&gt;
+
+&lt;h3&gt; Congratulations! You have completed this lab, and you are ready for the next topic. &lt;h3/&gt;
+
+&lt;br&gt;
+
+### Author(s)
+
+- [Rav Ahuja](https://www.linkedin.com/in/ravahuja/)
+- [Sandip Saha Joy](https://www.linkedin.com/in/sandipsahajoy/)
+
+![](https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DV0151EN-SkillsNetwork/images/footer_logo_sn_ibm.png)
+
+&lt;!-- #### Changelog
+| Date | Version | Changed by | Change Description |
+|------|--------|--------|---------|
+|2023-05-10| 2.2 | Eric Hao &amp; Vladislav Boyko | Updated Page Frames |
+| 2020-12-25 | 2.1 | Steve Ryan | ID Reviewed |
+| 2020-12-10 | 2.0 | Sandip Saha Joy | Created revised version from DB0201EN |
+| 2020 | 1.0 | Rav Ahuja  | Created initial version | 
+## &lt;h3 align&#x3D;&quot;center&quot;&gt; IBM Corporation 2023. All rights reserved. &lt;h3/&gt;--&gt;
+</textarea>
+    </div>
+</div>
+
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+<script src="https://unpkg.com/tippy.js@6"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/he@1.2.0/he.min.js"></script>
+<script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.3.6/iframeResizer.contentWindow.min.js"></script>
+
+<script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
+<link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+<link rel="stylesheet" href="public/css/custom_plyr.css?version=3.4.7" />
+
+<script src="editormd/examples/js/jquery.min.js"></script>
+<script src="editormd/editormd.js?version=3.4.7"></script>
+
+<script src="editormd/languages/en.js"></script>
+
+<script src="public/js/common.js?version=3.4.7"></script>
+<script src="public/js/render.js?version=3.4.7"></script>
+
+<script type="text/javascript">
+
+    var authorEditor = $(function () {
+        let metadata = he.decode('{&quot;markdown-version&quot;:&quot;v1&quot;,&quot;tool-type&quot;:&quot;instructional-lab&quot;,&quot;branch&quot;:&quot;lab-4246-instruction&quot;,&quot;version-history-start-date&quot;:&quot;2023-01-19T10:44:59Z&quot;,&quot;audio-timestamp-of-request-to-generate-wav&quot;:&quot;2024-10-25T23:09:13Z&quot;,&quot;audio-file-url&quot;:&quot;https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DB0201EN-SkillsNetwork/labs/Labs_Coursera_V5/labs/Lab%20-%20Sub-queries%20and%20Nested%20SELECTs%20/instructional-labs.md.wav&quot;,&quot;locales-url&quot;:&quot;https://cf-courses-data.static.labs.skills.network/iwX2yKRf0tzQvoDdE3h33g/Lab%20-%20Sub-queries%20and%20Nested%20SELE-v1-locales.json&quot;}')
+        injectMetadata(metadata)
+
+        let token = findGetParameter("token");
+
+        let LABS_BASE_URL = 'https://labs.cognitiveclass.ai';
+        let asset_library_prefix_url = 'https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DB0201EN-SkillsNetwork';
+        let tool_type = "instructional-lab";
+        let filename = `labs/Labs_Coursera_V5/labs/Lab%20-%20Sub-queries%20and%20Nested%20SELECTs%20/instructional-labs.md`;
+        let audioFileUrl = `https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DB0201EN-SkillsNetwork/labs/Labs_Coursera_V5/labs/Lab%20-%20Sub-queries%20and%20Nested%20SELECTs%20/instructional-labs.md.wav`
+        let localesUrl = `https://cf-courses-data.static.labs.skills.network/iwX2yKRf0tzQvoDdE3h33g/Lab%20-%20Sub-queries%20and%20Nested%20SELE-v1-locales.json`;
+        let currentTheme = localStorage.getItem("theme") || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? "dark" : "default");
+
+        return authorEditor = editormd("test-editormd", "3.4.7", {
+            tool_type,
+            filename,
+            audioFileUrl,
+            localesUrl,
+            width: "100%",
+            //height: "100%",
+            autoHeight: true,
+            // mode: 'markdown',
+            theme: currentTheme,
+            previewTheme: currentTheme,
+            editorTheme: currentTheme === "dark" ? "pastel-on-dark" : "default",
+            readOnly: true,
+            pluginPath: 'plugins/',
+            syncScrolling: false,
+            htmlDecode: 'img',
+            path: 'editormd/lib/',
+            watch: false,
+            // markdown,
+            toolbar: false,
+            atLink: false,
+            toc: true,
+            tocm: true,
+            tocDropdown: false,
+            tocTitle: "Table of Contents For your lab!",
+            tex: true,
+            flowChart: true,
+            sequenceDiagram: true,
+            codeFold: true, // Doesn't do anything?
+            taskList: true,
+            emoji: true,
+            saveMarkdownToTextarea: true,
+
+            onresize: function () {
+                $("html,body").css("overflow", "hidden");
+
+                this.preview.css({
+                    width: $(window).width(),
+                    height: $(window).height()
+                })
+
+                adjustProgressBarWidth()
+            },
+            fixCodeBlocks: function () {
+                adjustCodeBlocks(this);
+            },
+            onchange: function () { // called after marked finsihed its rendering
+                fixEncoding(this);
+
+                if (this.settings.tool_type != "instructional-lab") {
+                    fixCustomPlugins(this, 'https://reward.skills.network/claim');
+                }
+            },
+            onload: function () {
+                $(".markdown-body").addClass("hidden")
+                $("[type=\"file\"]").bind("change", function () {
+                    alert($(this).val());
+                    authorEditor.cm.replaceSelection($(this).val());
+                    console.log($(this).val(), authorEditor);
+                });
+
+                this.fullscreen();
+                this.previewing();
+
+                setPreviewWatchToolbar(this);
+
+                if (tool_type != "instructional-lab") {
+                    fixCustomPlugins(this, 'https://reward.skills.network/claim');
+                }
+                else {
+                    if(audioFileUrl) {
+                        addAudioWidget(this, audioFileUrl);
+                    }
+                }
+
+                const preferredLanguage = LANGUAGES.get(localStorage.getItem("preferredLanguage")) ? localStorage.getItem("preferredLanguage").toUpperCase() : "EN";
+
+                setTranslationContent(preferredLanguage).finally(() => {
+                    this.setMarkdown(this.getMarkdown());
+                    this.previewing();
+                    $(".markdown-body").removeClass("hidden")
+                });
+
+                
+                setAssetLibraryPrefixUrl(asset_library_prefix_url);
+                //comms with UI
+                setParentUrl(LABS_BASE_URL);
+                establishCommsWithUI(this);
+                //let the UI know that the author-ide has loaded
+                requestToUI({ type: "frame_loaded" });
+            }
+        });
+    });
+</script>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous">
+    </script>
+
+</html>
