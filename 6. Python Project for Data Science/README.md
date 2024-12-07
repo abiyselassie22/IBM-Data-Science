@@ -8,7 +8,9 @@ This course demostrates the foundational Python skills for working with data. It
 
 * Artificial Intelligence
 * Beautiful Soup
+* Dashboard
 * Data Analysis
+* Data Extraction
 * Data Science
 * Jupyter Notebooks
 * Pandas
