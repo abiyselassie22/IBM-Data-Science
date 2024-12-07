@@ -4,6 +4,14 @@
 
 This course demostrates the foundational Python skills for working with data. It involves completing a project in which one will assume the role of Data Scientist & will be provided with a Real-World dataset & a Real-World scenario to identify patterns & trends. It involves working on a hands-on project developing a dashboard using python. One will perform specific data science tasks such as extracting data, webscraping, visualizing data & creating a dashboard. The project will showcase one's proficiency with python & using libraries such as pandas & Beautiful soup within a Jupyter Notebook.
 
+## Topics
+
+* Extracting Stock Data Using Python y-finance API Library (https://github.com/abiyselassie22/IBM-Data-Science/blob/main/6.%20Python%20Project%20for%20Data%20Science/2.%20Webscraping%20Stock%20data%20using%20Python.ipynb)<br>
+
+* Extracting Stock Data Using a  Web Scraping & Request Library (https://github.com/abiyselassie22/IBM-Data-Science/blob/main/6.%20Python%20Project%20for%20Data%20Science/3.%20Webscraping%20Stock%20data%20using%20Requests.ipynb)<br>
+
+* Analyzing Historical Stock/Revenue Data & Building a Dashboard (https://github.com/abiyselassie22/IBM-Data-Science/blob/main/6.%20Python%20Project%20for%20Data%20Science/FinalAssign_Extract%26VisualizeStockData.ipynb)<br>
+
 ## Skills
 
 * Artificial Intelligence
