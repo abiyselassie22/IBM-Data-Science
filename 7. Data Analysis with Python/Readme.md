@@ -6,32 +6,32 @@ This course teaches how to import data from multiple sources, clean & wrangle da
 
 ## Weekly Topics
 
-* Importing Datasets
+* **Importing Datasets**
   * Understanding Data
   * Importing & Exporting Data in Python
   * Collecting & importing data
-* Data Wrangling
+* **Data Wrangling**
   * Dealing with Missing values in Python
   * Data Formatting in Python
   * Data Normalization in Python
   * Binning as a method of data pre-processing
   * Turning Categorical variables into Quantitative variables in Python
-* Exploratory Data Analysis (EDA)
+* **Exploratory Data Analysis (EDA)**
   * Descriptive Statistics
   * Correlation & Pearson correlation 
   * Chi-square test for Association
-* Model Development
+* **Model Development**
   * Simple linear regression and multiple linear regression
   * Model Evaluation using Visualization
   * Polynomial regression and pipelines
   * R-squared & Mean square error (MSE) Measures for In-Sample Evaluation 
   * Prediction and Decision making
-* Model Evaluation
+* **Model Evaluation**
   * Overfitting, Underfitting & Model selection
   * Ridge regression
   * Grid Search
   * Model Refinement
-* Final Assignment
+* **Final Assignment** [Click here](https://github.com/abiyselassie22/IBM-Data-Science/blob/master/7.%20Data%20Analysis%20with%20Python/6.%20House_Sales_in_King_Count_USA.jupyterlite.ipynb)<br>
   * Project on Dataset containing House Sales Prices for King County, USA
     
 ## Skills
