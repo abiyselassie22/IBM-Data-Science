@@ -6,11 +6,11 @@ This course demostrates the foundational Python skills for working with data. It
 
 ## Topics
 
-* Extracting Stock Data Using Python y-finance API Library (https://github.com/abiyselassie22/IBM-Data-Science/blob/main/6.%20Python%20Project%20for%20Data%20Science/2.%20Webscraping%20Stock%20data%20using%20Python.ipynb)<br>
+* [Extracting Stock Data Using Python y-finance API Library](https://github.com/abiyselassie22/IBM-Data-Science/blob/main/6.%20Python%20Project%20for%20Data%20Science/2.%20Webscraping%20Stock%20data%20using%20Python.ipynb)<br>
 
-* Extracting Stock Data Using a  Web Scraping & Request Library (https://github.com/abiyselassie22/IBM-Data-Science/blob/main/6.%20Python%20Project%20for%20Data%20Science/3.%20Webscraping%20Stock%20data%20using%20Requests.ipynb)<br>
+* [Extracting Stock Data Using a  Web Scraping & Request Library](https://github.com/abiyselassie22/IBM-Data-Science/blob/main/6.%20Python%20Project%20for%20Data%20Science/3.%20Webscraping%20Stock%20data%20using%20Requests.ipynb)<br>
 
-* Analyzing Historical Stock/Revenue Data & Building a Dashboard (https://github.com/abiyselassie22/IBM-Data-Science/blob/main/6.%20Python%20Project%20for%20Data%20Science/FinalAssign_Extract%26VisualizeStockData.ipynb)<br>
+* [Analyzing Historical Stock/Revenue Data & Building a Dashboard](https://github.com/abiyselassie22/IBM-Data-Science/blob/main/6.%20Python%20Project%20for%20Data%20Science/FinalAssign_Extract%26VisualizeStockData.ipynb)<br>
 
 ## Skills
 
