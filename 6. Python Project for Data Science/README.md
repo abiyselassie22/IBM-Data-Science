@@ -1,4 +1,4 @@
-# Python Project for DataScience
+# Python Project for Data Science
 
 ## Summary
 
@@ -19,7 +19,7 @@ This course demostrates the foundational Python skills for working with data. It
 
 ## Certificates & Badges
 
-Python Project for DataScience [Click for verification](https://coursera.org/verify/FZGM3URTLA27)<br>
+Python Project for Data Science [Click for verification](https://coursera.org/verify/FZGM3URTLA27)<br>
 
 Python Project for DataScience Badge [Click for verification](https://www.credly.com/badges/21ce6b0b-0385-4215-8a1e-002559f363b1/public_url)<br>
 
