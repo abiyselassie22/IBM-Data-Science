@@ -1,13 +1,13 @@
 # Data Visualization with Python
 
 ## Summary
-This course teaches how to create meaningful, effective, and aesthetically pleasing data visuals & plots in Python using Matplotlib & other libraries such as Seaborn, Folium, Plotly & dash. It teaches the many ways to effetively visualize both small-scale & large-scale data. It teaches one to work with many data visualization tools & techniques. It teaches how to create various types of basic & advanced graphs & charts like:. One will learn how to create interactive dashboards that allow even those without data science experience to better understand data, and make more effective & informed decisions. One will also complete numerous hands-on labs and a Final Project to practice & apply the many aspects & techniques of Data visualization using Jupyter Notebooks & cloud-based IDE. In the Final assignment, I took a role of a data analyst with a task to monitor and report US domestic airline flights performance & then analyze the performance of the reporting airline to improve flight reliability thereby improving customer reliability.
+This course teaches how to create meaningful, effective, and aesthetically pleasing data visuals (various types of basic & advanced graphs & charts) in Python using Matplotlib & other libraries such as Seaborn, Folium, Plotly & dash. It teaches the many ways of working with various data visualization tools & techniques to effetively visualize both small-scale & large-scale data. One will learn how to create interactive dashboards that allow even those without data science experience to better understand data, and make more effective & informed decisions. One will also complete numerous hands-on labs and a Final Project to practice & apply the many aspects & techniques of Data visualization using Jupyter Notebooks & cloud-based IDE. In the Final assignment, I took a role of a data analyst with a task to monitor and report US Domestic Airline Flights Performance & then analyze the performance of the Reporting Airline to improve flight reliability, thereby improving customer reliability.
 
 ## Weekly Topics
 
 * **Introduction to Data visualization Tools with Python**
   * Matplotlib
-  * Dataset on Immigration to Canada
+  * Working with a Dataset on Immigration to Canada
   * Line plots
 * **Basic & Specialized Visualization Tools**
   * Area plots
@@ -27,7 +27,7 @@ This course teaches how to create meaningful, effective, and aesthetically pleas
   * Plotly Express
   * Dash components: Core components & HTML components
 * **Final Assignment**
-  * Project uses an Interactive Dashboard to demonstrate US Domestic Airline Flights Performance
+  * This project uses an Interactive Dashboard to demonstrate US Domestic Airline Flights Performance & Yearly Average Flight Delay Statistics for a given year (2005 to 2020).
   
 ## Skills
 
