@@ -2,23 +2,35 @@
 
 ## Summary
 
-This course introduces the field of Data Science. It defines the significance of Data science and Data scientists in today's world of data deluge. It outlines key topics such as "What Do Data Scientists Do?", "Foundations of Big data", "Deep Learning & Machine Learning", "Data Science in Business", "Careers and Recruiting in Data Science", "The Report Structure".
+This course introduces the field of Data Science. It answers the question why Data Science has been labeled as the Sexiest Job in the 21st Century. It explains the significance of Data science and Data scientists in today's world of data deluge. It gives a good understanding of what Data Science is & what Data Scientists do, and teaches about the career paths in the field. It defines the science as a process of finding patterns in data and making meaningful, data-driven conculsions & predictions by analyzing big or small data using appropriate tools. It stresses that Data scientists should be able to tell stories (narrate) to communicate their findings to the relevant stakeholders after finding the solutions to the problems. In the Final Assignment, one will demonstrate his or her understanding of the videos and the readings by answering open-ended questions, defining Data Science and Data Scientist, describing the different sections comprising a final deliverable of a Data Science Project.  
 
-## Definition
+## Weekly Topics
 
-Data Science is an attempt to work with data to find answers to questions that we are exploring. It is a process of finding solutions to problems by analyzing big or small data using appropriate tools, and then telling stories to communicate the findings to the relevant stakeholders. It is an interdisciplinary  field of exploring, manipulating and analyzing data & using data to answer questions or make recommendations, dealing with either or small or big data with curiosity, storytelling (narrative) and communication skills.
+* **Defining Data Science**
+  * Fundamentals of Data Science
+  * Data Science topics & Algorithms
+  * Data Science: The Sexiest Job in the 21st Century
+* **Foundations of Big Data**
+  * What is Hadoop?
+  * Digital Transformation 
+  * Data mining
+  * Deep Learning & Machine Learning
+* **Data Science Business**
+  * Applications of Data Science
+  * Careers & Recruiting in Data Science
+* **Course Assignment**
+  * The Report Structure
 
 ## Skills
 
-* Critical Listening
-* Critical Reading
+* Critical Listening & Critical Reading
+* Big Data
 * Data Science Techniques
-* Machine Learning
+* Data Mining
+* Deep Learning & Machine Learning
 * Report structure
 * Watson Studio Service creation
-* Big Data
-* Data Mining
-
+  
 ## Certificates and Badges
 
 What is Data Science? [Click for verification](https://coursera.org/verify/TYWJCQ97H7BG)<br>
@@ -28,8 +40,6 @@ Data Science Orientation. [Click for verification](https://www.credly.com/badges
 
 ![image](https://github.com/user-attachments/assets/5570d594-0e52-4197-9909-7a45aa486a4f)
 
-![image](https://github.com/user-attachments/assets/72e6af40-d8a0-4e01-9c5f-e808a6294c9d)
 
-![image](https://github.com/user-attachments/assets/5b3cf3ff-8bb2-4ec6-806b-cd03d4e74523)
 
 
