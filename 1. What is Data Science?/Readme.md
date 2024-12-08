@@ -28,8 +28,6 @@ Data Science Orientation. [Click for verification](https://www.credly.com/badges
 
 ![image](https://github.com/user-attachments/assets/5570d594-0e52-4197-9909-7a45aa486a4f)
 
-![image](https://github.com/user-attachments/assets/72e6af40-d8a0-4e01-9c5f-e808a6294c9d)
 
-![image](https://github.com/user-attachments/assets/5b3cf3ff-8bb2-4ec6-806b-cd03d4e74523)
 
 
