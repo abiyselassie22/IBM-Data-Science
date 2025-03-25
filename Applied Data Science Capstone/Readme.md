@@ -8,7 +8,7 @@ This capstone Project course will give one the the opportunity to practice the w
 
 ## Weekly Tasks
 
-# Data Collection
+## Data Collection
 
 * The data were collected from public source of SpaceX API & by Webscraping SpaceX Wikipedia page.
 * Both data were then wrangled to impute missing values, and the cleaned data was normalized.
