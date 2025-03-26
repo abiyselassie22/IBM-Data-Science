@@ -27,7 +27,9 @@ This course teaches how to create meaningful, effective, and aesthetically pleas
   * Plotly Express
   * Dash components: Core components & HTML components
 * **Final Assignment**
-  * This project uses an Interactive Dashboard to demonstrate US Domestic Airline Flights Performance & Yearly Average Flight Delay Statistics for a given year (2005 to 2020).
+  * In this project, an Interactive Dashboard was used to demonstrate US Domestic Airline Flights Performance & Yearly Average Flight Delay Statistics for a given year (2005 to 2020).
+  * **US Domestic Airline Flights Performance** [Click here for pdf](https://github.com/abiyselassie22/IBM-Data-Science/blob/main/8.%20Data%20Visualization/Final%20Assignment/6DashboardToggle.pdf)<br>
+  * **Flight_delay** [Click here for Dash](https://github.com/abiyselassie22/IBM-Data-Science/blob/main/8.%20Data%20Visualization/Final%20Assignment/Flight_delay.py)<br>
   
 ## Skills
 
