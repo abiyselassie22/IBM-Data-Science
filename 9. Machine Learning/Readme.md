@@ -2,7 +2,7 @@
 
 ## Summary
 
-This course gives a general overview of Machine Learning topics such as Supervised vs Unsupervised learning, Linear & Non-linear regression, and the usage of each algorithm. It then dives into classification techniques using different classification algorithms, such as K-Nearest Neighbours (KNN), decision trees and Logistic Regression, and apply them on various datasets to solve real world problems. It also teaches how to use k-means clustering for customer segmentation. One will complete numerous hands-on learning labs by working with Python Libraries like SciPy & Scikit-learn. In the Final Project, one will demonstrate the learned skills by building classifiers, evaluating, and comparing several machine learning models using different algorithms (Linear Regression, KNN,  Decision Trees, Logistic Regression, SVM) to predict whether there will be rain the following day.
+This course gives a general overview of Machine Learning topics such as Supervised vs Unsupervised learning, Linear & Non-linear regression, and the usage of each algorithm. It then dives into classification techniques using different classification algorithms, such as K-Nearest Neighbours (KNN), decision trees and Logistic Regression, and apply them on various datasets to solve real world problems. It also teaches how to use k-means clustering for customer segmentation. It depicts the iterative nature of model development. We will complete numerous hands-on learning labs with tools used for Real-world applications by working with Python Libraries like SciPy & Scikit-learn. We will also build a foundation in statistical methods like linear & logistic regression. In the Final Project, I took a role of a Data Scientist with a task to predict whether there would be rain the following day using a Rainfall dataset from Australian Government's Bureau of Meteorology. I was expected to build classifiers, evaluate, and compare several machine learning models using different algorithms (Linear Regression, KNN,  Decision Trees, Logistic Regression, SVM) to predict whether there would be rain the following day. 
 
 ## Weekly Topics
 
@@ -34,9 +34,10 @@ This course gives a general overview of Machine Learning topics such as Supervis
   * Partition-based clustering 
   * Hierarchical clustering algorithms 
   * Density-based clustering algorithms 
-* **Final Assignment** [Click here](https://github.com/abiyselassie22/IBM-Data-Science/blob/master/9.%20Machine%20Learning/ML0101EN_SkillUp_FinalAssignment%20(2).ipynb)<br>
+* **Final Assignment**
+  * The project Lab 'Rain Prediction in Australia' uses a Rainfall dataset from Australian Government's Bureau of Meteorology to predict whether there will be rain the following day.
 
-  *  The project Lab 'Rain Prediction in Australia' uses a Rainfall dataset from Australian Government's Bureau of Meteorology to predict whether there will be rain the following day.
+  * **Rain Prediction in Australia** [Click here](https://github.com/abiyselassie22/IBM-Data-Science/blob/master/9.%20Machine%20Learning/ML0101EN_SkillUp_FinalAssignment%20(2).ipynb)<br>
 
 ## Skills
 
