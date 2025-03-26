@@ -4,7 +4,7 @@
 
 ## Summary
 
-This capstone Project course will give one the the opportunity to practice the work that Data Scientists do in real life when working with datasets. I took on the role of a Data Scientist with a new rocket company, Space Y that would like to compete with SpaceX. The task was to predict if the first stage of the SpaceX Falcon Rocket will land successfully, and to determine if SpaceX will reuse the first stage depending on the price of each launch. To achieve this goal, I was to follow the Data Science Methodology & assist with data collection, web scraping, data wrangling, exploratory data analysis, data visualization of several datasets obtained from public source & Wikipedia pages to visualize launch sites with most success & payload ranges. Successful landing outcomes were predicted by building Machine Learning models using model development & model evaluation metrics, and then the results were reported to stakeholders using PowerPoint Presentation.
+This capstone Project course will give one the opportunity to practice the work that Data Scientists do in real life when working with datasets. I took on the role of a Data Scientist with a new rocket company, Space Y that would like to compete with SpaceX. The task was to predict if the first stage of the SpaceX Falcon Rocket will land successfully, and to determine if SpaceX will reuse the first stage depending on the price of each launch. To achieve this goal, I was to follow the Data Science Methodology & assist with data collection, web scraping, data wrangling, Exploratory Data Analysis (EDA), data visualization of several datasets obtained from public source & Wikipedia pages to visualize launch sites with most success & payload ranges. Successful landing outcomes were predicted by building Machine Learning models using model development & model evaluation metrics, and then the results were reported to stakeholders using PowerPoint Presentation.
 
 ## Weekly Tasks
 
@@ -18,7 +18,7 @@ This capstone Project course will give one the the opportunity to practice the w
 * Exploratory Data Analysis (EDA) using Data Visualization and SQL was performed on the wrangled data.
 * Scatterplots, line plots & bar chart were plotted to detect any relationship between factors & identify factors for successful landing & yearly trend.
 
-##  Data Visualization
+## Data Visualization
 
 * Interactive Visual Analytics using Folium and Plotly Dash was then performed.
 * An Interactive Map with Folium was built to visualize a launch site proximity to geographical markers.

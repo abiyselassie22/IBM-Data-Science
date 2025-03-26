@@ -2,7 +2,7 @@
 
 ## Summary
 
-This course teaches how to import data from multiple sources, clean & wrangle data, perform Exploratory Data Analysis (EDA), and create meaningful data visualizations. One will then predict future trends from data by developing linear, multiple, polynomial regression models & pipelines, and learn how to evaluate them. It involves working on a hands-on labs & projects. One will work with several open source Python libraries such as Pandas & Numpy to load, manipulate, analyze and visualize cool datasets; Scipy & Scikit-learn to build smart machine learning models and make predictions. It ends with a Final Assignment, where one will take a Data Analyst role to analyze & predict the market prices of houses using some attributes or features based on a detailed dataset.
+This course teaches how to import data from multiple sources, clean & wrangle data, perform Exploratory Data Analysis (EDA), and create meaningful data visualizations. One will then predict future trends from data by developing linear, multiple, polynomial regression models & pipelines, and learn how to evaluate them. It involves working on hands-on labs & projects. One will work with several open-source Python libraries such as Pandas & Numpy to load, manipulate, analyze and visualize cool datasets; Scipy & Scikit-learn to build smart machine learning models and make predictions. It ends with a Final Assignment, where one will take a Data Analyst role to analyze & predict the market prices of houses using some attributes or features based on a detailed dataset.
 
 ## Weekly Topics
 
