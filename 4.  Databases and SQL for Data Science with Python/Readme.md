@@ -2,8 +2,7 @@
 
 ## Summary
 
-This course introduces Relational databases. SQL is the working language of data scientists and other data professionals for communicating with and extracting data from databases. It teaches SQL inside out from the very basics of SELECT statements to advanced concepts like Joins. It enables us to write basic SQL statements like: SELECT, INSERT, UPDATE & Delete; filter result sets using WHERE, COUNT, DISTINCT & LIMIT clauses; differentiate between DML & DDL Statements; CREATE, ALTER, DROP & load tables; use string patterns & ranges; ORDER, GROUP result sets & built-in Database functions; build sub-queries & query data from multiple tables; access databases as a Data Scientist using Jupyter Notebooks with SQL & Python; work with advanced SQL like Stored Procedures, Views, ACID Transactions, Inner & Outer Joins through hands-on labs & projects.  In the Final Project, we will analyze multiple real-world datasets including the census, crime, and school data for a given neighborhood or district, and identify the causes that impact the enrollment, safety, health, and environment ratings of schools.
-
+This course introduces Relational databases. SQL is the working language of data scientists and other data professionals for communicating with and extracting data from databases. It teaches SQL inside out from the very basics of SELECT statements to advanced concepts like Joins. It enables us to write basic SQL statements like: SELECT, INSERT, UPDATE & Delete; filter result sets using WHERE, COUNT, DISTINCT & LIMIT clauses; differentiate between DML & DDL Statements; CREATE, ALTER, DROP & load tables; use string patterns & ranges; ORDER, GROUP result sets & built-in Database functions; build sub-queries & query data from multiple tables; access databases as a Data Scientist using Jupyter Notebooks with SQL & Python; work with advanced SQL like Stored Procedures, Views, ACID Transactions, Inner & Outer Joins through hands-on labs & projects. In the Final Project, I needed to analyze multiple real-world datasets (including the census, crime, and school data for a given neighborhood or district) by running specific queries using Advanced SQL techniques, and identified the causes that impact the enrollment, safety, health, and environment ratings of schools using result sets generated.
 ## Weekly Topics
 
 * **Getting started with SQL (Basic SQL)**
@@ -28,14 +27,14 @@ This course introduces Relational databases. SQL is the working language of data
 * **Course Assignment** 
   * Working with Real-World Datasets
   * Working with Built-in SQL Functions
-  * Project Course Assignment [Click here](https://github.com/abiyselassie22/IBM-Data-Science/blob/master/4.%20%20Databases%20and%20SQL%20for%20Data%20Science%20with%20Python/5.%20Working%20with%20Real%20World%20Datasets/2.%20PeerAssign-v5_SQLite.ipynb)<br>
+  * **Project Course Assignment** [Click here](https://github.com/abiyselassie22/IBM-Data-Science/blob/master/4.%20%20Databases%20and%20SQL%20for%20Data%20Science%20with%20Python/5.%20Working%20with%20Real%20World%20Datasets/2.%20PeerAssign-v5_SQLite.ipynb)<br>
 
 * **Advanced SQL for Data Engineer**
   * Views
   * Stored Procedures
   * ACID transactions
   * Join Statements
-  * Final Project: Advanced SQL Techniques
+  * **Final Project: Advanced SQL Techniques**
     
 ## Skills
 
